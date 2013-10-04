@@ -7,7 +7,6 @@
   </head>
   <body class="wrapper">
   	<div class="wrapper">
-  	    <form id="searchForm" action="feed" method="post">
 	 	<div class="search-container">
 	 		<div class="input-group">
 			  <input type="text" class="form-control" placeholder="Collection Name" name="collectionName" id="cName"></input>
@@ -26,9 +25,8 @@
 			<div class="input-group">
 			  <input type="text" class="form-control" placeholder="Tags" name="tags" id="tag"></input>
 			</div>
-			<button class="btn btn-lg btn-primary btn-block search" type="submit" value="submit">Create</button>
+			<button class="btn btn-lg btn-primary btn-block search" type="submit" value="submit" onClick="formHandler()">Create</button>
 	 	</div>
-	 	</form>
   	</div>
   	<script src="js/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
