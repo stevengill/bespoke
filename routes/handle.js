@@ -3,8 +3,9 @@ var config = require('../config');
 
 exports.login = function(req, res){
     //console.log(req);
-    if (req.query.code){
+    if (req.query.state = "boo"){
         console.log(req.query.code);
+        console.log('step1');
         request.post('https://www.behance.net/v2/oauth/token', 
             {
                 client_id:config.clientID, 
@@ -15,6 +16,7 @@ exports.login = function(req, res){
         });
     }else{
         console.log(req);
+        console.log('step 2');
         res.render('user',{title:'hi'});
     }
 }
