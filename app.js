@@ -44,7 +44,7 @@ app.get('/', routes.index);
 app.get('/users', user.collection);
 app.get('/home', home.home1);
 app.get('/search', search.search1);
-app.post('/feed', search.searchrequest);
+app.get('/feed', search.searchrequest);
 app.get('/handle', handle.login);
 
 http.createServer(app).listen(app.get('port'), function(){

@@ -22,3 +22,9 @@ function sendSearch(){
 		}
 	}); 
 }
+
+function formHandler(){
+    var tags = $('#tag')[0].value;
+    tags = tag.replace(' ', '').replace(',','|');
+    location.href = "/feed?tag="+tags;
+}
