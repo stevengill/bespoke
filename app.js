@@ -41,6 +41,7 @@ app.locals({
 
 app.get('/', routes.index);
 app.get('/users', user.collection);
+app.get('/home', home.home);
 app.get('/search', search.search1);
 app.get('/feed', search.searchrequest);
 app.get('/handle', handle.login);

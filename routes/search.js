@@ -9,8 +9,7 @@ exports.searchrequest = function(req, res){
     //two things
     //create collection
     //send search request
-    
-    request('https://www.behance.net/v2/projects?tags=food&api_key=2Sfl5ZgmEkrJMIG8TRhecHnFgNO0QHTw', function (error, response, body) {
+    request('https://www.behance.net/v2/projects?tags=fashion&api_key=2Sfl5ZgmEkrJMIG8TRhecHnFgNO0QHTw', function (error, response, body) {
       if (!error && response.statusCode == 200) {
         var resp = JSON.parse(body);
         var covers = [];
