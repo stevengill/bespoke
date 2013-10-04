@@ -9,6 +9,7 @@ var user = require('./routes/user');
 var search = require('./routes/search');
 var http = require('http');
 var path = require('path');
+var home = require('./routes/home');
 var handle = require('./routes/handle');
 
 var app = express();
@@ -41,7 +42,7 @@ app.locals({
 
 app.get('/', routes.index);
 app.get('/users', user.collection);
-app.get('/home', home.home);
+app.get('/home', home.home1);
 app.get('/search', search.search1);
 app.get('/feed', search.searchrequest);
 app.get('/handle', handle.login);
