@@ -1,8 +1,17 @@
+@font-face{
+	font-family: "Tungsten-Medium";
+	src: url('fonts/tungsten_medium.otf');
+}
+
 body{
 	background-color: #404041;
 	margin: 0;
 	padding: 0;
 	height: 100%;
+}
+
+body.feeds{
+	background-color: #404041;
 }
 
 h1{
@@ -223,6 +232,8 @@ a:hover{
 	width: 100px;
 	border-radius: 50%;
 	margin: 10px;
+	background:none;
+	border: none;
 }
 
 .button-like{
@@ -243,6 +254,18 @@ a:hover{
 	height: 130px;
 	position: absolute;
 	bottom:0;
+}
+
+.like-wrapper{
+	width: 100%;
+	height: 20%;
+	background-color: #404041;
+	position: absolute;
+	bottom: 0;
+}
+
+.feeds-container{
+	margin-top: 20%;
 }
 
 
