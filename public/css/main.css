@@ -11,6 +11,17 @@ h1{
 	font-size: 120%;
 }
 
+h2{
+	font-family: "Tungsten-Medium", sans-serif;
+	font-size: 120%;
+	color: white;
+}
+
+p{
+	font-family: "Arial";
+	font-size: 30px;
+}
+
 body.profile-wrapper{
 	background-color: white;
 	margin: 0;
@@ -18,9 +29,13 @@ body.profile-wrapper{
 	height: 100%;
 }
 
+.form-control{
+	height: 50px;
+}
+
 
 body.wrapper{
-	background-image: url('http://behance.vo.llnwd.net/profiles4/133706/projects/6090979/38a1cfc873e4ec99ed0442d5013347f2.jpg');
+	background-color: #f1f1f2;
 	width: 100%;
 	height: 100%;
 	padding: 0;
@@ -95,6 +110,7 @@ img{
 
 .profile-name{
 	text-align: center;
+	padding-top: 30px;
 }
 
 .thumbnail{
@@ -150,12 +166,11 @@ a:hover{
 }
 
 .search-container{
-	margin-top: 20px;
 	padding: 10px;
 	width: 60%;
 	margin-right: auto;
 	margin-left: auto;
-	margin-top: 50%;
+	margin-top: 20%;
 }
 
 .input-group, .btn-group, button, .search{
@@ -171,6 +186,18 @@ a:hover{
 	background-color: white;
 	color: black;
 	border:none;
+}
+
+.button-custom{
+	font-size: 250%;
+	text-align: center;
+	padding-top: 30px;
+	width: 100%;
+	height: 130px;
+	position: absolute;
+	bottom:0;
+	background-color: #fb5548;
+	color: white;
 }
 
 
