@@ -42,7 +42,7 @@ app.locals({
 app.get('/', routes.index);
 app.get('/users', user.collection);
 app.get('/search', search.search1);
-app.get('/searchrequest', search.searchrequest);
+app.get('/feed', search.searchrequest);
 app.get('/handle', handle.login);
 
 http.createServer(app).listen(app.get('port'), function(){
