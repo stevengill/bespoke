@@ -28,3 +28,14 @@ function formHandler(){
     tags = tag.replace(' ', '').replace(',','|');
     location.href = "/feed?tag="+tags;
 }
+$(document).ready(function(){
+
+
+	$(document).delegate('.dropdown-menu .option', 'click', function(){
+		console.log('clicked');
+		console.log($(this).parent().prev().html($(this).html()));
+		$(this).parent().prev().html($(this).html());
+	});
+
+
+});

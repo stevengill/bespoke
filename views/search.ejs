@@ -7,6 +7,28 @@
   </head>
   <body class="wrapper">
   	<div class="wrapper">
+  		<nav class="navbar navbar-default" role="navigation">
+		  <!-- Brand and toggle get grouped for better mobile display -->
+		  <div class="navbar-header">
+		    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+		      <span class="sr-only">Toggle navigation</span>
+		      <span class="icon-bar"></span>
+		      <span class="icon-bar"></span>
+		      <span class="icon-bar"></span>
+		    </button>
+		    <div class="navbar-brand"><img src="/images/Bespoke-header-logo.png"/></div>
+		  </div>
+
+		  <!-- Collect the nav links, forms, and other content for toggling -->
+		  <div class="collapse navbar-collapse navbar-ex1-collapse">
+		    <ul class="nav navbar-nav">
+		      <li class="active"><a href="/users">Collections</a></li>
+		      <li><a href="/search">New Feed</a></li>
+		    </ul>
+		  </div><!-- /.navbar-collapse -->
+		</nav>
+
+
 	 	<div class="search-container">
 	 		<div class="input-group">
 			  <input type="text" class="form-control" placeholder="Collection Name" name="collectionName" id="cName"></input>
@@ -17,16 +39,28 @@
 			    Creative Field <span class="caret"></span>
 			  </button>
 			  <ul class="dropdown-menu" role="menu">
-			    <li><a href="#">Fashion</a></li>
-			    <li><a href="#">Graphic Design</a></li>
-			    <li><a href="#">Illustration</a></li>
+			    <li class="option">Fashion</li>
+			    <li class="option">Graphic Design</li>
+			    <li class="option">Illustration</li>
+			  </ul>
+			</div>
+			<div class="btn-group">
+			  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+			    Creative Field 2<span class="caret"></span>
+			  </button>
+			  <ul class="dropdown-menu" role="menu">
+			    <li class="option">Fashion</li>
+			    <li class="option">Graphic Design</li>
+			    <li class="option">Illustration</li>
 			  </ul>
 			</div>
 			<div class="input-group">
-			  <input type="text" class="form-control" placeholder="Tags" name="tags" id="tag"></input>
+			  <input type="text" class="form-control" id="tag" placeholder="Tags">
 			</div>
-			<button class="btn btn-lg btn-primary btn-block search" type="submit" value="submit" onClick="formHandler()">Create</button>
 	 	</div>
+	 	<button class="button-custom" onClick="formHandler()">
+	 		<h1>Start Feed</h1>
+	 	</button>
   	</div>
   	<script src="js/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
