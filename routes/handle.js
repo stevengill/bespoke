@@ -15,6 +15,9 @@ exports.login = function(req, res){
                 grant_type:'authorization_code'
         }}, function(error, resp, body){
             console.log('here?');
+            cosole.log(error);
+            console.log(resp);
+            console.log(body);
         });
     }else{
         console.log(req);
