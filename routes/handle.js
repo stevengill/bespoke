@@ -12,10 +12,15 @@ exports.login = function(req, res){
                 grant_type:'authorization_code'
         }}, function(error, resp, body){
             var resp = JSON.parse(body);
+
+            if ( resp.user && resp.user.id ) {
+              req.session.user_id = resp.user.id;
+            }
+
             req.session.access_token = resp.access_token;
             config.accessToken = resp.access_token;
 
-            request.get( config.behanceURL + "users/" + userid + 'collections', function(e,r,b) {
+            request.get( config.behanceURL + "users/" + resp.user.id + '/collections', function(e,r,b) {
               res.render('user', {
                 image: resp.user.images[138],
                 name: resp.user.display_name,
