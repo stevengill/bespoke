@@ -32,12 +32,19 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+var connection = require('nano')('http://localhost:5984');
+
+app.locals({
+  db: connection.use('bespoke'),
+  nano: connection
+});
+
 app.get('/', routes.index);
 app.get('/users', user.collection);
 app.get('/home', home.home);
 app.get('/search', search.search1);
 app.get('/searchrequest', search.searchrequest);
-app.get('/handlelogin', handle.login);
+app.get('/handle', handle.login);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
