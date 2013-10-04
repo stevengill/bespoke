@@ -16,7 +16,7 @@ exports.login = function(req, res){
         }}, function(error, resp, body){
             var resp = JSON.parse(body);
             console.log(resp);
-            res.render('user',{image:resp.user.images[138], name:body.user.display_name});
+            res.render('user',{image:resp.user.images[138], name:resp.user.display_name});
         });
     }
 }
