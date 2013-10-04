@@ -34,6 +34,7 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.index);
 app.get('/users', user.collection);
+app.get('/home', home.home);
 app.get('/search', search.search1);
 app.get('/searchrequest', search.searchrequest);
 app.get('/handlelogin', handle.login);
