@@ -14,9 +14,9 @@ exports.login = function(req, res){
                 redirect_uri: 'http://bespoke.elastichance.com/handle',
                 grant_type:'authorization_code'
         }}, function(error, resp, body){
-            console.log(body);
-            
-            res.render('user',{image:body.user.images[138], name:body.user.display_name});
+            var resp = JSON.parse(body);
+            console.log(resp);
+            res.render('user',{image:resp.user.images[138], name:body.user.display_name});
         });
     }
 }
