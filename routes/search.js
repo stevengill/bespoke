@@ -12,6 +12,7 @@ exports.searchrequest = function(req, res){
     console.log('req.session.at= ' + req.session.access_token);
     request.post(config.behanceURL+'collections?access_token='+req.session.accessToken, {form:{
             title: req.query.tag}}, function(error, response, body){
+            if (response.satusCode == 200){
             var par = JSON.parse(body);
             console.log(par);
             console.log(par.collection.id);
@@ -19,6 +20,7 @@ exports.searchrequest = function(req, res){
                 console.log('error: '+ error);
                 console.log('collection made?');
                 console.log('body: '+ body);
+            }
     });
     
     console.log(req.query.tag);
