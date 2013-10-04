@@ -191,13 +191,15 @@ a:hover{
 .button-custom{
 	font-size: 250%;
 	text-align: center;
-	padding-top: 30px;
+	padding-top: 10px;
 	width: 100%;
 	height: 130px;
 	position: absolute;
 	bottom:0;
 	background-color: #fb5548;
 	color: white;
+	margin-bottom: 0;
+	border: none;
 }
 
 
