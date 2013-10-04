@@ -2,9 +2,35 @@
 <html>
   <head>
     <title>Search</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="css/main.css" rel="stylesheet" media="screen">
   </head>
-  <body>
-  	<div class="main-container">Search</div>
+  <body class="wrapper">
+  	<div class="wrapper">
+	 	<div class="search-container">
+	 		<div class="input-group">
+			  <input type="text" class="form-control" placeholder="Collection Name">
+			</div>
+	 		<!-- Single button -->
+			<div class="btn-group">
+			  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+			    Creative Field <span class="caret"></span>
+			  </button>
+			  <ul class="dropdown-menu" role="menu">
+			    <li><a href="#">Fashion</a></li>
+			    <li><a href="#">Graphic Design</a></li>
+			    <li><a href="#">Illustration</a></li>
+			  </ul>
+			</div>
+			<div class="input-group">
+			  <input type="text" class="form-control" placeholder="Tags">
+			</div>
+			<a href="#" onClick="sendSearch();"><button class="btn btn-lg btn-primary btn-block search" type="submit">Create</button></a>
+	 	</div>
+  	</div>
+  	<script src="js/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/main.js"></script>
   </body>
 </html>
