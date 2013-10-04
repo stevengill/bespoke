@@ -11,6 +11,7 @@ var http = require('http');
 var path = require('path');
 var home = require('./routes/home');
 var handle = require('./routes/handle');
+var feedpost = require('./routes/feedpost');
 
 var app = express();
 
@@ -45,8 +46,8 @@ app.get('/users', user.collection);
 app.get('/home', home.home1);
 app.get('/search', search.search1);
 app.get('/feed', search.searchrequest);
+app.get('/feedpost', feedpost.feedpost1);
 app.get('/handle', handle.login);
-app.get('/feedpost' search.feedpost);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
