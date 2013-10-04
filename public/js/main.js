@@ -30,7 +30,8 @@ function formHandler(){
 }
 
 function liked(){
-    
+    var id = document.querySelectorAll('.active')[1].children[0].id;
+    location.href = "/feedpost?id="+id;
 }
 
 $(document).ready(function(){

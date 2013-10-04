@@ -12,9 +12,11 @@ exports.searchrequest = function(req, res){
     console.log('req.session.at= ' + req.session.access_token);
     request.post(config.behanceURL+'collections?access_token='+req.session.accessToken, {form:{
             title: req.query.tag}}, function(error, response, body){
-        console.log('error: '+ error);
-        console.log('collection made?');
-        console.log('body: '+ body);
+            var par = JSON.parse(body);
+            req.session.collectionID = par.collection.id;
+                console.log('error: '+ error);
+                console.log('collection made?');
+                console.log('body: '+ body);
     });
     
     console.log(req.query.tag);
@@ -31,4 +33,14 @@ exports.searchrequest = function(req, res){
         res.render('feeds', {projects:resp.projects, images:covers});
       }
     })
+}
+
+exports.feedpost = function(req, res){
+    request.post(config.behanceURL+'collections/'+req.session.collectionID+'/projects?access_token='+req.session.accessToken, {form:{
+            projects: req.query.id}}, function(error, response, body){
+            var par = JSON.parse(body);
+                console.log('error: '+ error);
+                console.log('project added to collection?');
+                console.log('body: '+ body);
+    });
 }

@@ -46,6 +46,7 @@ app.get('/home', home.home1);
 app.get('/search', search.search1);
 app.get('/feed', search.searchrequest);
 app.get('/handle', handle.login);
+app.get('/feedpost' search.feedpost);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
