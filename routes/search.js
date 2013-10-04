@@ -9,7 +9,8 @@ exports.searchrequest = function(req, res){
     //two things
     //create collection
     //send search request
-    request.post(config.behanceURL+'collections?access_token='+config.accessToken, {form:{
+    console.log('req.session.at= ' + req.session.accessToken);
+    request.post(config.behanceURL+'collections?access_token='+req.session.accessToken, {form:{
             title: req.query.tag}}, function(error, response, body){
         console.log('collection made?');
     });
