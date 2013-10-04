@@ -10,7 +10,7 @@ exports.searchrequest = function(req, res){
     //create collection
     //send search request
     console.log(req.query.tag);
-    request('https://www.behance.net/v2/projects?tags='+req.query.tag+'&api_key='+config.clientID+, function (error, response, body) {
+    request('https://www.behance.net/v2/projects?tags='+req.query.tag+'&api_key='+config.clientID+'&page=1', function (error, response, body) {
       if (!error && response.statusCode == 200) {
         var resp = JSON.parse(body);
         var covers = [];
