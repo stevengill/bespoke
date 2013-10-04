@@ -25,7 +25,7 @@ function sendSearch(){
 
 function formHandler(){
     var tags = $('#tag')[0].value;
-    tags = tag.replace(' ', '').replace(',','|');
+    tags = tags.replace(' ', '').replace(',','|');
     location.href = "/feed?tag="+tags;
 }
 $(document).ready(function(){
