@@ -14,14 +14,11 @@ exports.login = function(req, res){
                 redirect_uri: 'http://bespoke.elastichance.com/handle',
                 grant_type:'authorization_code'
         }}, function(error, resp, body){
-            console.log('here?');
+
             console.log(error);
-            console.log(resp);
+            //console.log(resp);
             console.log(body);
+            res.render('user',{title:'hi'});
         });
-    }else{
-        console.log(req);
-        console.log('step 2');
-        res.render('user',{title:'hi'});
     }
 }
