@@ -9,8 +9,13 @@ exports.searchrequest = function(req, res){
     //two things
     //create collection
     //send search request
+    request.post(config.behanceURL+'collections?access_token='+config.accessToken, {form:{
+            title: req.query.tag}}, function(error, response, body){
+        console.log('collection made?');
+    });
+    
     console.log(req.query.tag);
-    request('https://www.behance.net/v2/projects?tags='+req.query.tag+'&api_key='+config.clientID+'&page=1', function (error, response, body) {
+    request(config.behanceURL+'projects?tags='+req.query.tag+'&api_key='+config.clientID+'&page=1', function (error, response, body) {
       if (!error && response.statusCode == 200) {
         var resp = JSON.parse(body);
         var covers = [];
