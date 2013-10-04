@@ -148,7 +148,7 @@ img{
 
 #new-feed{
 	height: auto;
-	min-height: 200px;
+	min-height: 100px;
 	position: absolute;
 	bottom: 0;
 	width: 100%;
@@ -162,7 +162,7 @@ img{
 }
 
 .icon{
-	margin: 5px;
+	margin: 10px;
 	text-align: center;
 	float: left;
 }
