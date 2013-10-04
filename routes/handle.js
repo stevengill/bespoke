@@ -2,7 +2,7 @@ var request = require('request');
 var config = require('../config');
 
 exports.login = function(req, res){
-    //console.log(req);
+    console.log("starting");
     if (req.query.state = "boo"){
         console.log(req.query.code);
         console.log('step1');
