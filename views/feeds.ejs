@@ -33,12 +33,12 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
              <div class="item active">
-                 <img src=<%= images[0] %> />
+                 <img src=<%= images[0] %> id=<%=projects[i].id %> />
                  <div class="carousel-caption"></div>
         	   </div>
            <%for (var i=1; i< images.length; i++){%>
                <div class="item">
-                   <img src=<%= images[i] %> />
+                   <img src=<%= images[i] %> id=<%=projects[i].id %>/>
                    <div class="carousel-caption"></div>
           	</div>
           <%} %>
