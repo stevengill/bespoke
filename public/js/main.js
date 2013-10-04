@@ -28,6 +28,11 @@ function formHandler(){
     tags = tags.replace(' ', '').replace(',','|');
     location.href = "/feed?tag="+tags;
 }
+
+function liked(){
+    
+}
+
 $(document).ready(function(){
 
 
