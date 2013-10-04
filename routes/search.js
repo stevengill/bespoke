@@ -13,6 +13,8 @@ exports.searchrequest = function(req, res){
     request.post(config.behanceURL+'collections?access_token='+req.session.accessToken, {form:{
             title: req.query.tag}}, function(error, response, body){
             var par = JSON.parse(body);
+            console.log(par);
+            console.log(par.collection.id);
             req.session.collectionID = par.collection.id;
                 console.log('error: '+ error);
                 console.log('collection made?');
