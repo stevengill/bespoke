@@ -39,24 +39,11 @@
 				</div>
 			</div>
 		</li>
-		<li>
-		    <a href="/search" class="thumbnail">
-		     	 <div class="feed">
-					<div class="feed-title">
-						<h3>Vintage Cards</h3>
-					</div>
-				</div>
-		    </a>
-		</li>
-		<li>
-		    <a href="/search" class="thumbnail">
-		     	 <div class="feed">
-					<div class="feed-title">
-						<h3>Photography</h3>
-					</div>
-				</div>
-		    </a>
-		</li>
+        <%collections.forEach( function(e) {%>
+          <li><a href="/search"class="thumbnail"><divclass="feed"><divclass="feed-title"><h2>
+              <%=e.title %>
+          </h2></div></div></a></li>';
+        <%}>
 		<li id="new-feed">
 		    <a href="/search" class="thumbnail newfeed">
 		     	 <div class="feed" id="new">
